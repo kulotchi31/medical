@@ -1,0 +1,217 @@
+  body {
+        width: 13in;
+        height: 8.5in;
+        padding-bottom: 10px;
+        margin: auto;
+        border-top: inset;
+        border-left: inset;
+        border-right: outset;
+        border-bottom: outset;
+        zoom: 0.9;
+    }
+
+    .font-size-12 {
+        font-size: 12px
+    }
+
+    .font-size-15 {
+        font-size: 15px
+    }
+
+    .font-size-20 {
+        font-size: 20px
+    }
+
+    @media print {
+
+        .noprint {
+            visibility: hidden;
+
+        }
+
+        body {
+            width: 100%;
+            border: none;
+        }
+
+        .header {
+            position: fixed;
+        }
+
+        .mainbody {
+            margin-top: 20px;
+        }
+
+    }
+
+    @page {
+        size: 13in 8.5in;
+        margin: 4mm;
+
+
+    }
+
+
+
+    table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        text-align: left;
+    }
+
+    th,
+    td {
+        text-align: center
+    }
+
+    td {
+        height: 20px;
+    }
+
+    .border-bottom {
+        border: solid 1.5px black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .title {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .body-div {
+        font-family: Times New Roman;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .header-div {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Entity name and Fund Cluster */
+    .input-entityName {
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .span-fundCLuster {
+        margin-left: 16.5%;
+        font-size: 15px;
+    }
+
+    .input-funCluster {
+        width: 27%;
+    }
+
+    .sub-entityName {
+        width: 30%;
+        margin-left: 80px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    /* Division and Responsibility Code */
+
+    .input-division {
+        width: 30%;
+    }
+
+    .span-resCode {
+        margin-left: 19%;
+
+    }
+
+    .input-resCode {
+        width: 17%;
+    }
+
+    /* Office and RIS No.  */
+
+    .input-office {
+        width: 32%;
+    }
+
+    .span-ris {
+        margin-left: 18%;
+    }
+
+    .input-ris {
+        width: 34%;
+    }
+
+
+
+    .th-header {
+        width: 13%;
+    }
+
+    .th-requested {
+        width: 25%;
+    }
+
+    .th-approved {
+        width: 30%;
+    }
+
+    .th-issued {
+        width: 14%;
+    }
+
+
+    .align-weight {
+        font-weight: normal;
+        text-align: left;
+    }
+
+
+    .rotate_text {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: left;
+        text-align: center;
+        width: 2%;
+
+    }
+
+    .red {
+        color: red;
+    }
+
+    .wbold {
+        font-weight: bold;
+    }
+
+    .prepared{
+        width:50%; 
+        float:right; 
+        height: 3vh;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .weekly_report{
+        width:30%; 
+        height: 3vh;
+        
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        margin-bottom: 2vh;
+    }

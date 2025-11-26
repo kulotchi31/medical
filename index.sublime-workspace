@@ -1,0 +1,446 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"style"
+			],
+			[
+				"mag",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"update",
+				"updated_at"
+			],
+			[
+				"b",
+				"br"
+			],
+			[
+				"B",
+				"br"
+			],
+			[
+				"la",
+				"large"
+			],
+			[
+				"S",
+				"style"
+			],
+			[
+				"admi",
+				"admin_login"
+			],
+			[
+				"c",
+				"static"
+			],
+			[
+				"max",
+				"max-block-size"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"padding-",
+				"padding-left"
+			],
+			[
+				"ta",
+				"table-layout"
+			],
+			[
+				"ob",
+				"object-position"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"posi",
+				"object-position"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"conta",
+				"container"
+			],
+			[
+				"a",
+				"initial"
+			],
+			[
+				"background-o",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"hi",
+				"line-height"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"lig",
+				"lightblue"
+			],
+			[
+				"li",
+				"lightblue"
+			],
+			[
+				"ble",
+				"lightblue"
+			],
+			[
+				"inde",
+				"index"
+			],
+			[
+				"webhoo",
+				"webhookUrl"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/xampp/htdocs/sample/db_connect.php",
+		"/C/Users/Zekken/AppData/Roaming/Sublime Text/Packages/User/PHP.sublime-build",
+		"/D/xampp/htdocs/sample/index.php",
+		"/D/xampp/htdocs/sample/css/sb-admin-2.min.css",
+		"/D/xampp/htdocs/sample/index.php.html",
+		"/D/xampp/htdocs/nesrac/style/news.css",
+		"/D/xampp/htdocs/nesrac/style/footer.css",
+		"/D/xampp/htdocs/nesrac/footer.php",
+		"/D/xampp/htdocs/nesrac/about.php",
+		"/D/xampp/htdocs/nesrac/manage_articles.php",
+		"/D/xampp/htdocs/nesrac/news.php",
+		"/D/xampp/htdocs/nesrac/update_order.php",
+		"/D/xampp/htdocs/nesrac/admin_signup.php",
+		"/D/xampp/htdocs/nesrac/add_article.php",
+		"/D/xampp/htdocs/nesrac/updatequantity.php",
+		"/D/xampp/htdocs/nesrac/checkout.php",
+		"/D/xampp/htdocs/nesrac/basket.php",
+		"/D/xampp/htdocs/nesrac/shop_product.php",
+		"/D/xampp/htdocs/nesrac/update_payment.php",
+		"/D/xampp/htdocs/nesrac/export_report.php",
+		"/D/xampp/htdocs/nesrac/dashboard.php",
+		"/D/xampp/htdocs/nesrac/edit_profile.php",
+		"/D/xampp/htdocs/nesrac/contact.php",
+		"/D/xampp/htdocs/nesrac/courier_dashboard.php",
+		"/D/xampp/htdocs/nesrac/accept_sell_request.php",
+		"/D/xampp/htdocs/nesrac/process_decline_request.php",
+		"/D/xampp/htdocs/nesrac/sell_requests.php",
+		"/D/xampp/htdocs/nesrac/pig_sell_req.php",
+		"/D/xampp/htdocs/nesrac/add_to_cart.php",
+		"/D/xampp/htdocs/nesrac/survey.php",
+		"/D/xampp/htdocs/nesrac/js/index_new.js",
+		"/D/xampp/htdocs/nesrac/login.php",
+		"/D/xampp/htdocs/nesrac/index.php",
+		"/D/xampp/htdocs/nesrac/products.php",
+		"/D/xampp/htdocs/nesrac/user_profile.php",
+		"/D/xampp/htdocs/nesrac/profile.php",
+		"/D/xampp/htdocs/nesrac/fetch_order_details.php",
+		"/D/xampp/htdocs/sample/index.html",
+		"/D/xampp/htdocs/nesrac/order.php",
+		"/D/xampp/htdocs/nesrac/member_monitoring.php",
+		"/D/xampp/htdocs/nesrac/example-app/paymongo-app/vendor/symfony/http-foundation/Response.php",
+		"/D/xampp/htdocs/nesrac/regester_webhook.php",
+		"/D/xampp/htdocs/nesrac/log.txt",
+		"/D/xampp/htdocs/nesrac/cancel_order.php",
+		"/D/xampp/htdocs/nesrac/forgot_password.php",
+		"/D/xampp/htdocs/nesrac/update_order_status.php",
+		"/D/xampp/htdocs/nesrac/admin.php",
+		"/D/xampp/htdocs/nesrac/style/admin.css",
+		"/D/xampp/htdocs/nesrac/process_meat.php",
+		"/D/xampp/htdocs/nesrac/order_success.php",
+		"/D/xampp/htdocs/nesrac/process_order.php",
+		"/D/xampp/htdocs/nesrac/navbar.php",
+		"/D/xampp/htdocs/nesrac/process_address.php",
+		"/D/xampp/htdocs/nesrac/style/checkout.css",
+		"/D/xampp/htdocs/nesrac/fetch_data.php",
+		"/D/xampp/htdocs/nesrac/create_article.php",
+		"/D/xampp/htdocs/nesrac/style/basket.css",
+		"/D/xampp/htdocs/nesrac/survey_modal.php",
+		"/D/xampp/htdocs/nesrac/admin_login.php",
+		"/D/xampp/htdocs/nesrac/style/index_new.css",
+		"/D/xampp/htdocs/nesrac/pending_user.php",
+		"/D/xampp/htdocs/nesrac/export_orders.php",
+		"/D/xampp/htdocs/nesrac/reset_password.php",
+		"/D/xampp/htdocs/nesrac/verify_code.php",
+		"/D/xampp/htdocs/nesrac/homepage.php",
+		"/D/xampp/htdocs/nesrac/style/user_profile.css",
+		"/D/xampp/htdocs/nesrac/style/about.css",
+		"/D/xampp/htdocs/nesrac/verify_email.php",
+		"/D/xampp/htdocs/nesrac/style/pending_users.css",
+		"/D/xampp/htdocs/nesrac/style/verify_code.css",
+		"/D/xampp/htdocs/nesrac/style/updateprofile.css",
+		"/D/xampp/htdocs/nesrac/style/show_products.css",
+		"/D/xampp/htdocs/nesrac/style/shoppingcart.css",
+		"/D/xampp/htdocs/nesrac/style/shop_product.css",
+		"/D/xampp/htdocs/nesrac/style/reset_password.css",
+		"/D/xampp/htdocs/nesrac/style/profile.css",
+		"/D/xampp/htdocs/nesrac/add_non_member_pig.php",
+		"/D/xampp/htdocs/nesrac/accepted_pigs.php",
+		"/D/xampp/htdocs/nesrac/view_meat_produced.php",
+		"/D/xampp/htdocs/nesrac/export_csv.php",
+		"/D/xampp/htdocs/nesrac/style/dashboard.css",
+		"/D/xampp/htdocs/nesrac/style/member_monitoring.css",
+		"/D/xampp/htdocs/nesrac/style/order.css",
+		"/D/xampp/htdocs/nesrac/style/navbar.css",
+		"/D/xampp/htdocs/nesrac/style/courier_dash.css",
+		"/D/xampp/htdocs/nesrac/style/contact.css",
+		"/D/xampp/htdocs/nesrac/style/admin_accept.css",
+		"/D/xampp/htdocs/nesrac/load_events.php",
+		"/D/xampp/htdocs/nesrac/calendar.html",
+		"/D/xampp/htdocs/nesrac/C_dashboard.php",
+		"/D/xampp/htdocs/nesrac/process_sell_requests.php",
+		"/D/xampp/htdocs/nesrac/pig_sell_request.php",
+		"/D/xampp/htdocs/nesrac/profileupdate.php",
+		"/D/xampp/htdocs/nesrac/process_sell_request.php",
+		"/D/xampp/htdocs/nesrac/style/addproduct.css",
+		"/D/xampp/htdocs/nesrac/style/order_details.css",
+		"/D/xampp/htdocs/nesrac/js/charts.js",
+		"/D/xampp/htdocs/nesrac/article.php",
+		"/D/xampp/htdocs/nesrac/style/homeuser.css",
+		"/D/xampp/htdocs/nesrac/web.html",
+		"/D/xampp/htdocs/New folder/New folder/nesrac/index.php",
+		"/D/xampp/htdocs/nesrac/balance_tracking.php",
+		"/D/xampp/htdocs/nesrac/transaction_history.php",
+		"/D/xampp/htdocs/nesrac/style/register.css",
+		"/D/xampp/htdocs/nesrac/admin_accept.css",
+		"/D/xampp/htdocs/nesrac/send_reset_code.php",
+		"/D/xampp/htdocs/nesrac/check_payment_status.php",
+		"/D/xampp/htdocs/nesrac/memberpayment.php",
+		"/D/xampp/htdocs/nesrac/log.php",
+		"/D/xampp/htdocs/nesrac/updateproducts.php",
+		"/D/xampp/htdocs/nesrac/webhook.php",
+		"/D/xampp/htdocs/nesrac/process_gcash.php",
+		"/D/xampp/htdocs/nesrac/vendor/guzzlehttp/guzzle/composer.json",
+		"/D/xampp/htdocs/nesrac/order_confirmation.php",
+		"/D/xampp/htdocs/nesrac/example-app/paymongo-app/app/Http/Controllers/Controller.php",
+		"/D/xampp/htdocs/nesrac/example-app/paymongo-app/routes/web.php",
+		"/D/xampp/htdocs/nesrac/example-app/routes/web.php",
+		"/D/xampp/htdocs/nesrac/example-app/app/Http/Controllers/PaymentController.php",
+		"/D/xampp/htdocs/nesrac/admin/dashboard.php",
+		"/D/xampp/htdocs/nesrac/vendor/memberpayment.php",
+		"/D/xampp/htdocs/nesrac/admin/order.php",
+		"/D/xampp/htdocs/nesrac/order_confirmation.html",
+		"/D/xampp/htdocs/nesrac/admin/products.php",
+		"/D/xampp/htdocs/nesrac/admin/dashboard.html"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 59.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/PHP/PHP.sublime-build",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 318.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

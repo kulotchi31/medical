@@ -1,0 +1,38 @@
+.dental-charting {
+  border: 1px solid #cacaca;
+  padding: 30px;
+  margin: 50px;
+  text-align: center; /* Fixed invalid 'position: center' */
+}
+
+.chart {
+  text-align: center; /* Fixed invalid 'position center' */
+  background: #fff;
+}
+
+.codes {
+  border: 1px solid #cacaca;
+}
+
+.input {
+  height: 30px;
+  width: 100px;
+  margin: 5px 0;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #2199e8; /* Fixed invalid '&:focus;' */
+}
+
+.circle-icon-2 {
+  color: #feeda8;
+}
+
+.circle-icon-3 {
+  color: #01bffd;
+}
+
+.circle-icon-4 {
+  color: #0a0600;
+}

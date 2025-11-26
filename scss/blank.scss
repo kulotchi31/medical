@@ -1,0 +1,79 @@
+/* Sidebar Styles */
+$sidebar-bg-color: #4e73df;
+$sidebar-hover-color: #575757;
+$sidebar-text-color: white;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #4e73df;
+    color: white;
+    padding-top: 20px;
+    transition: all 0.3s;
+}
+
+.sidebar .sidebar-header {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .nav-item {
+    margin: 10px 0;
+}
+
+/* Content Styles */
+.content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.card-header {
+    font-weight: bold;
+    color: #4e73df;
+}
+
+.table-bordered th, .table-bordered td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+/* Page Heading */
+h1.h3.mb-4.text-gray-800 {
+    color: #4e73df;
+}
+
+/* Footer */
+footer.sticky-footer.bg-white {
+    background-color: #f8f9fc;
+}
+
+footer .copyright {
+    font-size: 14px;
+}
