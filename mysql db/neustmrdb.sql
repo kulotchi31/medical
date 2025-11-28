@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2025 at 01:35 AM
+-- Generation Time: Nov 28, 2025 at 08:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `neustmrdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campus`
+--
+
+CREATE TABLE `campus` (
+  `campus_id` int(4) NOT NULL,
+  `campus_code` varchar(20) NOT NULL,
+  `campus_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `campus`
+--
+
+INSERT INTO `campus` (`campus_id`, `campus_code`, `campus_name`) VALUES
+(1, 'TOC', 'TALAVERA');
 
 -- --------------------------------------------------------
 
@@ -131,6 +150,60 @@ INSERT INTO `dental_records` (`id`, `student_id`, `tooth_number`, `record_detail
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `emp_id` int(4) NOT NULL,
+  `id_number` varchar(20) NOT NULL,
+  `fname` varchar(30) NOT NULL,
+  `mname` varchar(20) NOT NULL,
+  `lname` varchar(30) NOT NULL,
+  `position` varchar(200) NOT NULL,
+  `office` varchar(100) NOT NULL,
+  `campus` varchar(100) NOT NULL,
+  `province` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `barangay` varchar(200) NOT NULL,
+  `emc_person` varchar(100) NOT NULL,
+  `emc_number` varchar(20) NOT NULL,
+  `emc_address` varchar(200) NOT NULL,
+  `emp_image` text DEFAULT NULL,
+  `deleted_at` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`emp_id`, `id_number`, `fname`, `mname`, `lname`, `position`, `office`, `campus`, `province`, `city`, `barangay`, `emc_person`, `emc_number`, `emc_address`, `emp_image`, `deleted_at`) VALUES
+(1, '17185', 'REY JOHN', 'PASIG', 'AGUILAR', 'INSTRUCTOR', 'MANAGEMENT INFORMATION SYSTEM OFFICE', 'TALAVERA', 'nueva ecija', 'sto.domingo', 'st.peter', 'john clack', '0955623110', 'st.peter, sto.domingo, nueva ecija', '', NULL),
+(2, '15420', 'PRECIOUS', '', 'CAMILLE', 'LOHB', 'COLLEGE OF INFORMATION COMMUNICATIONS TECHNOLOGY', 'TALAVERA', 'nueva ecija', 'sto.domingoS', 'st.peterS', 'john clack', '0955623110', 'st.peterS, sto.domingoS, nueva ecija', '', NULL),
+(4, '9899', 'CLARKE', 'griffin', 'EGVERG', 'GGGG', 'MANAGEMENT INFORMATION SYSTEM OFFICE', 'TALAVERA', 'nueva ecijaE', 'WGWEGR', 'GRWG', 'WGWGR', '0955623110', 'GRWG, WGWEGR, nueva ecijaE', 'uploads/employees/1764293741_Blank diagram - Page 1 (5).png', '2025-11-28'),
+(5, '44234234', 'RBNRNB', 'DRNBRN', 'RTBRTTB', 'RTTNRTN', 'COLLEGE OF INFORMATION COMMUNICATIONS TECHNOLOGY', 'TALAVERA', 'RNRN', 'RNRNR', 'NGBB', 'BDFB', '2234234', 'NGBB, RNRNR, RNRN', '', '2025-11-28'),
+(7, '14141', 'awrgvervr', 'gbvrebr', 'eerbv', 'brbrtb', 'COLLEGE OF INFORMATION COMMUNICATIONS TECHNOLOGY', 'TALAVERA', 'etbrbtv', 'rbrb', 'rbrb', 'bdbdfbdfbdf', '2234234', 'rbrb, rbrb, etbrbtv', '', '2025-11-28'),
+(8, '345535', 'tg34tg34gh', 'erhehe', 'gerh', 'ergerg', 'COLLEGE OF INFORMATION COMMUNICATIONS TECHNOLOGY', 'TALAVERA', 'rehber', 'hbe4hrbe4', 'hrehtbrth', 'rthrt', '0955623110', 'hrehtbrth, hbe4hrbe4, rehber', '', '2025-11-28'),
+(9, '15454', 'Camilo', '', 'Villaviza', 'ISA2', 'MANAGEMENT INFORMATION SYSTEM OFFICE', 'TALAVERA', 'nueva ecijaE', 'sto.domingoS', 'st.peter', 'john clack', '0955623110', 'st.peter, sto.domingoS, nueva ecijaE', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee_treatment_records`
+--
+
+CREATE TABLE `employee_treatment_records` (
+  `emp_mtrID` int(11) NOT NULL,
+  `id_number` int(11) NOT NULL,
+  `emp_complaint` varchar(200) NOT NULL,
+  `treatment` varchar(200) NOT NULL,
+  `date_treatment` date NOT NULL,
+  `deleted_at` date NOT NULL,
+  `date_created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `medical_certificates`
 --
 
@@ -175,7 +248,8 @@ INSERT INTO `medical_location` (`campus_id`, `campus_name`, `course_name`, `crea
 (11, 'General Tinio Street Campus', 'Bachelor of Science in Civil Engineering', '2025-02-18 02:38:52', NULL),
 (12, 'Main Campus', 'Bachelor of Secondary Education', '2025-02-18 02:41:15', NULL),
 (13, 'Fort Magsaysay Campus', 'Bachelor of Public Administration', '2025-02-20 03:17:46', NULL),
-(14, 'Main Campus', 'Bachelor of Science in Information Technology', '2025-04-04 07:31:58', NULL);
+(14, 'Main Campus', 'Bachelor of Science in Information Technology', '2025-04-04 07:31:58', NULL),
+(15, 'San Isidro Campus', 'Bachelor of Science in Business Administration', '2025-11-26 05:35:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -216,7 +290,9 @@ INSERT INTO `medical_record` (`medical_id`, `student_id`, `course_id`, `school_y
 (67, 147, 13, '2024-2025', 'none', 0, 'Type 1 ', 'Irregular HB', 0, 'none', 'none', '2025-02-05', '2025-02-20 03:17:46', NULL, NULL, NULL),
 (68, 148, 6, '2024-2025', 'none', 0, 'None', 'None', 0, 'none', 'none', '2025-03-10', '2025-03-12 02:07:13', NULL, NULL, NULL),
 (69, 149, 14, '2024-2025', 'fish', 1, 'dsasdasd', 'sdasdas', 1, 'pwd', 'dasasdsda', '0000-00-00', '2025-04-04 07:31:58', '2025-04-08 06:03:43', NULL, NULL),
-(70, 151, 6, '2024-2025', 'fish', 0, 'None', 'None', 0, 'pwd', 'dasasdsda', '2025-04-04', '2025-04-04 07:33:54', '2025-04-08 08:16:26', NULL, NULL);
+(70, 151, 6, '2024-2025', 'fish', 0, 'None', 'None', 0, 'pwd', 'dasasdsda', '2025-04-04', '2025-04-04 07:33:54', '2025-04-08 08:16:26', NULL, NULL),
+(71, 152, 6, 'dsadas', 'n/a', 0, 'None', 'None', 0, 'n/a', 'n/a', '2026-06-26', '2025-11-26 05:32:26', NULL, NULL, NULL),
+(72, 153, 15, 'dsadas', 'n/a', 0, 'None', 'None', 0, 'n/a', 'n/a', '2026-06-10', '2025-11-26 05:35:38', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -255,7 +331,30 @@ INSERT INTO `medical_treatment_records` (`MTR_id`, `date`, `chief_complaint`, `t
 (39, '2025-04-08', 'Vision Problems', 'dasdasd', '2025-04-08 05:29:29', NULL, '201911015999'),
 (40, '2025-04-08', 'Dental Cavities', 'dasd', '2025-04-08 05:32:10', NULL, '201911015999'),
 (41, '2025-04-08', 'Vision Problems', 'sdasdas', '2025-04-08 05:32:27', NULL, '2019555556'),
-(42, '2025-04-24', 'tooth ache', 'pill', '2025-04-24 06:13:27', NULL, '201911015999');
+(42, '2025-04-24', 'tooth ache', 'pill', '2025-04-24 06:13:27', NULL, '201911015999'),
+(43, '2025-11-28', 'Fever', 'mipol\\r\\n', '2025-11-28 05:21:49', NULL, '3123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `office`
+--
+
+CREATE TABLE `office` (
+  `office_id` int(4) NOT NULL,
+  `office_name` varchar(100) NOT NULL,
+  `office_code` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `office`
+--
+
+INSERT INTO `office` (`office_id`, `office_name`, `office_code`) VALUES
+(1, 'DEPARTMENT OF MEDICINE', 'MEDTECH'),
+(2, 'MANAGEMENT INFORMATION SYSTEM OFFICE', 'MIS'),
+(3, 'RECORDS OFFICE', 'REC'),
+(4, 'COLLEGE OF INFORMATION COMMUNICATIONS TECHNOLOGY', 'CICT');
 
 -- --------------------------------------------------------
 
@@ -300,7 +399,9 @@ INSERT INTO `physical_examination` (`exam_id`, `medical_id`, `exam_date`, `heigh
 (64, 67, '2025-04-04', 120.00, 60.00, '120/80', '', '2025-04-04 00:28:21', NULL, 1, 1),
 (65, 67, '2025-04-04', 120.00, 60.00, '120/80', '', '2025-04-04 00:28:24', NULL, 1, 1),
 (66, 69, '0000-00-00', 120.00, 60.00, '120/80', 'AB+', '2025-04-04 07:31:58', NULL, 0, 0),
-(67, 70, '2025-04-04', 120.00, 60.00, '120/80', 'A+', '2025-04-04 07:33:54', NULL, 1, 0);
+(67, 70, '2025-04-04', 120.00, 60.00, '120/80', 'A+', '2025-04-04 07:33:54', NULL, 1, 0),
+(68, 71, '2026-06-26', 0.00, 50.00, 'dadasd', 'A+', '2025-11-26 05:32:26', NULL, 0, 0),
+(69, 72, '2026-06-10', 123.00, 42.00, '110/70', 'A+', '2025-11-26 05:35:38', NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -336,7 +437,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `email`, `password`, `role`, `created_at`, `deleted_at`) VALUES
-(9, 'mrjixel@gmail.com', '$2y$10$d84c6Zg9HCDsMHGF/CNDtOMn/3ATuLyQdRVDpy0W7DIwxiZFD5kau', 'super_admin', '2025-02-03 21:09:06', NULL),
+(9, 'mrjixel@gmail.com', '$2y$12$vG1j5MuRxhq2b6Ox94QPLurZCLfzBHnRZ4yTj4evFnHv8bL0Rl7v2', 'super_admin', '2025-02-03 21:09:06', NULL),
 (80, 'patrickherminigildo03@gmail.com', '$2y$10$zrmv9d4ARuA9TUyqst24FOSnI9C7HgwkTxY1FV1IU4K0MRXvQuiom', 'admin', '2025-03-27 06:39:50', NULL);
 
 -- --------------------------------------------------------
@@ -376,11 +477,20 @@ INSERT INTO `vaccine` (`vaccine_id`, `medical_id`, `dose_number`, `vaccination_d
 (67, 68, 2, '2025-03-05', '2025-03-12 02:07:13', NULL),
 (68, 68, 2, '2025-03-05', '2025-03-12 02:07:13', NULL),
 (69, 69, 0, '2025-05-02', '2025-04-04 07:31:58', NULL),
-(70, 70, 3, '2025-04-04', '2025-04-04 07:33:54', NULL);
+(70, 70, 3, '2025-04-04', '2025-04-04 07:33:54', NULL),
+(71, 71, 3, '2024-06-12', '2025-11-26 05:32:26', NULL),
+(72, 72, 3, '2024-06-16', '2025-11-26 05:35:38', NULL);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `campus`
+--
+ALTER TABLE `campus`
+  ADD PRIMARY KEY (`campus_id`),
+  ADD UNIQUE KEY `campus_code` (`campus_code`);
 
 --
 -- Indexes for table `common_health_issues`
@@ -401,6 +511,20 @@ ALTER TABLE `dental_logs`
 ALTER TABLE `dental_records`
   ADD PRIMARY KEY (`id`),
   ADD KEY `student_id` (`student_id`);
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`emp_id`),
+  ADD UNIQUE KEY `id_number` (`id_number`);
+
+--
+-- Indexes for table `employee_treatment_records`
+--
+ALTER TABLE `employee_treatment_records`
+  ADD PRIMARY KEY (`emp_mtrID`),
+  ADD UNIQUE KEY `emp_number` (`id_number`);
 
 --
 -- Indexes for table `medical_certificates`
@@ -429,6 +553,12 @@ ALTER TABLE `medical_record`
 --
 ALTER TABLE `medical_treatment_records`
   ADD PRIMARY KEY (`MTR_id`);
+
+--
+-- Indexes for table `office`
+--
+ALTER TABLE `office`
+  ADD PRIMARY KEY (`office_id`);
 
 --
 -- Indexes for table `physical_examination`
@@ -465,6 +595,12 @@ ALTER TABLE `vaccine`
 --
 
 --
+-- AUTO_INCREMENT for table `campus`
+--
+ALTER TABLE `campus`
+  MODIFY `campus_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `common_health_issues`
 --
 ALTER TABLE `common_health_issues`
@@ -483,6 +619,18 @@ ALTER TABLE `dental_records`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `emp_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `employee_treatment_records`
+--
+ALTER TABLE `employee_treatment_records`
+  MODIFY `emp_mtrID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `medical_certificates`
 --
 ALTER TABLE `medical_certificates`
@@ -492,25 +640,31 @@ ALTER TABLE `medical_certificates`
 -- AUTO_INCREMENT for table `medical_location`
 --
 ALTER TABLE `medical_location`
-  MODIFY `campus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `campus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `medical_record`
 --
 ALTER TABLE `medical_record`
-  MODIFY `medical_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `medical_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `medical_treatment_records`
 --
 ALTER TABLE `medical_treatment_records`
-  MODIFY `MTR_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `MTR_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT for table `office`
+--
+ALTER TABLE `office`
+  MODIFY `office_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `physical_examination`
 --
 ALTER TABLE `physical_examination`
-  MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `student_health_issues`
@@ -528,7 +682,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `vaccine`
 --
 ALTER TABLE `vaccine`
-  MODIFY `vaccine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `vaccine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- Constraints for dumped tables
