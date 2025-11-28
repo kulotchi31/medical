@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
     } else {
         $id_number = htmlspecialchars(trim($_POST['id_number']));
 
-        $query = "SELECT * FROM students WHERE id_number = ?";
-        $stmt = $conn_student->prepare($query);
+        $query = "SELECT * FROM employee WHERE id_number = ?";
+        $stmt = $conn_medical->prepare($query);
         $stmt->bind_param("s", $id_number);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <h3 class="m-0 font-weight-bold text-primary"><i
-                                    class="fas fa-fw fa-notes-medical"></i>Medical Treatment Record</h3>
+                                    class="fas fa-fw fa-notes-medical"></i>Employee Medical Treatment Record</h3>
                         </div>
                         <div class="card-body">
                             <h4>User Information</h4>
@@ -97,9 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                                 <div class="alert alert-danger"><?php echo htmlspecialchars($error_message1); ?></div>
                             <?php endif; ?>
 
-                            <form action="../frontend/medical_treatment_record.php" method="POST">
+                            <form action="../frontend/emp_treatment_record.php" method="POST">
                                 <div class="form-group">
-                                    <label for="id_number">Student (Number/Name)</label>
+                                    <label for="id_number">Employee (Number/Name)</label>
                                     <input type="text" list="studentList" id="id_number" name="id_number"  class="form-control" placeholder="Type Number or Name" required>
                                     <datalist id="studentList"></datalist>
 
@@ -118,13 +118,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                                             <tr>
                                                 <th>Id Number</th>
                                                 <th>Name</th>
-                                                <th>Campus</th>
+                                                <th>Office</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><?php echo htmlspecialchars($user_data['id_number']); ?></td>
-                                                <td><?php echo htmlspecialchars($user_data['first_name'] . ' ' . $user_data['middle_name'] . ' ' . $user_data['last_name']); ?>
+                                                <td><?php echo htmlspecialchars($user_data['fname'] . ' ' . $user_data['mname'] . ' ' . $user_data['lname']); ?>
                                                 </td>
                                                 <td><?php echo htmlspecialchars($user_data['campus']); ?></td>
                                             </tr>
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                                 </div>
 
                                 <?php if ($medical_records): ?>
-                                    <h5 class="mt-4">Medical Treatment Records</h5>
+                                    <h5 class="mt-4">Employee Medical Treatment Records</h5>
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable">
                                             <thead>
@@ -200,16 +200,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                                             }
                                         }
 
-                                        // Initial render
                                         renderTable();
                                         renderPagination();
                                     </script>
                                 <?php endif; ?>
 
-                                <!-- Separate Button to Show Modal -->
 
 
-                                <!-- Add Medical Treatment Record Modal -->
                                 <div class="modal fade" id="addTreatmentModal" tabindex="-1"
                                     aria-labelledby="addTreatmentModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -220,16 +217,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <form action="../backend/insert_medical_record.php" method="POST">
+                                            <form action="../backend/insert_emp_treatment.php" method="POST">
                                                 <div class="modal-body">
-                                                    <input type="hidden" name="student_id"
+                                                    <input type="hidden" name="employee_id"
                                                         value="<?php echo htmlspecialchars($user_data['id_number']); ?>">
                                                     <input type="hidden" name="first_name"
-                                                        value="<?php echo htmlspecialchars($user_data['first_name']); ?>">
+                                                        value="<?php echo htmlspecialchars($user_data['fname']); ?>">
                                                     <input type="hidden" name="middle_name"
-                                                        value="<?php echo htmlspecialchars($user_data['middle_name']); ?>">
+                                                        value="<?php echo htmlspecialchars($user_data['mname']); ?>">
                                                     <input type="hidden" name="last_name"
-                                                        value="<?php echo htmlspecialchars($user_data['last_name']); ?>">
+                                                        value="<?php echo htmlspecialchars($user_data['lname']); ?>">
 
                                                     <div class="form-group">
                                                         <label for="date">Date</label>
@@ -291,6 +288,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id_number'])) {
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../js/sb-admin-2.min.js"></script>
     <script src="../vendor/chart.js/Chart.min.js"></script>

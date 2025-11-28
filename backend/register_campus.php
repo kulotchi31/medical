@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message_type3'] = "error";
     }
 
+    
     $stmt->close();
     $conn->close();
     header("Location: ../frontend/add_campus");

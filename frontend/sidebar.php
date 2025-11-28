@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <BR><img src="../img/neust.png" alt="Logo" class="neustlogo">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./m_dashboard.php">
-        <div class="sidebar-brand-text mx-3">NEUST STUDENT MEDICAL RECORD</div>
+        <div class="sidebar-brand-text mx-3">NEUST MEDICAL RECORDS</div>
     </a>
     <hr class="sidebar-divider my-1">
 
@@ -60,6 +60,21 @@ if (session_status() === PHP_SESSION_NONE) {
             <i class="fas fa-fw fa-certificate"></i>
             <span>Medical Certificate</span>
         </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpMedical"
+            aria-expanded="true" aria-controls="collapseEmpMedical">
+            <i class="fas fa-fw fa-user-md"></i>
+            <span>Employee's Medical</span>
+        </a>
+        <div id="collapseEmpMedical" class="collapse" aria-labelledby="headingMedical" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="../frontend/add_emp">Add Records</a>
+                <a class="collapse-item" href="emp_med_records">Medical Records</a>
+                <!-- <a class="collapse-item" href="physical_examination">physical_examination</a> -->
+                <a class="collapse-item" href="../frontend/emp_treatment_record">Treatment Record</a>
+            </div>
+        </div>
     </li>
 
 

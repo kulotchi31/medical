@@ -1,0 +1,40 @@
+POST Data: Array
+(
+    [first_name] => mkjnbn
+    [middle_name] => afasfa
+    [last_name] => fasfdasf
+    [guardian_name] => john clack
+    [emergency_contact] => 0955623110
+    [allergy] => n/a
+    [asthma] => 0
+    [diabetes] => None
+    [heart_disease] => None
+    [other_HC] => n/a
+    [medical_id] => 72
+)
+
+Received medical_id: 72
+Constructed Student Query: UPDATE neust_student_details.students
+                         SET first_name = 'mkjnbn', middle_name = 'afasfa', last_name = 'fasfdasf', guardian_name = 'john clack', emergency_contact = '0955623110' WHERE student_id = '153'
+Constructed Medical Query: UPDATE neustmrdb.medical_record
+                         SET allergy = 'n/a', asthma = '0', diabetes = 'None', heart_disease = 'None', other_HC = 'n/a' WHERE medical_id = '72'
+POST Data: Array
+(
+    [first_name] => mkjnbn
+    [middle_name] => afasfa
+    [last_name] => fasfdasf
+    [guardian_name] => john clack
+    [emergency_contact] => 0955623110
+    [allergy] => n/a
+    [asthma] => 0
+    [diabetes] => None
+    [heart_disease] => None
+    [other_HC] => n/a
+    [medical_id] => 72
+)
+
+Received medical_id: 72
+Constructed Student Query: UPDATE neust_student_details.students
+                         SET first_name = 'mkjnbn', middle_name = 'afasfa', last_name = 'fasfdasf', guardian_name = 'john clack', emergency_contact = '0955623110' WHERE student_id = '153'
+Constructed Medical Query: UPDATE neustmrdb.medical_record
+                         SET allergy = 'n/a', asthma = '0', diabetes = 'None', heart_disease = 'None', other_HC = 'n/a' WHERE medical_id = '72'

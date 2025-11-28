@@ -293,7 +293,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['spreadsheet']) && $_
 
                                 <div class="col-md-6">
                                     <label>Upload Student Photo:</label>
-                                <input type="file" name="student_photo" class="form-control" accept="image/*" required>
+                                <input type="file" name="student_photo" class="form-control" accept="image/*" >
                                     <label>Province:</label>
                                     <input type="text" name="province" class="form-control" required>
 

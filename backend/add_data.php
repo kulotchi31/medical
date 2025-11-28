@@ -129,28 +129,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dose_number = $_POST['dose_number'] ?? '';
     $vaccination_date = $_POST['vaccination_date'] ?? '';
 
-    if (isset($_FILES["student_photo"]) && $_FILES["student_photo"]["error"] == 0) {
-        $target_dir = "uploads/"; 
-        $target_file = $target_dir . basename($_FILES["student_photo"]["name"]);
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+   if (isset($_FILES["student_photo"]) && $_FILES["student_photo"]["error"] == 0) {
 
-        $check = getimagesize($_FILES["student_photo"]["tmp_name"]);
-        if ($check === false) {
-            die("Error: File is not an image.");
-        }
+    // Use absolute path to avoid "Unable to move" errors
+    $target_dir = __DIR__ . "/uploads/";
 
-        if (!in_array($imageFileType, ["jpg", "jpeg", "png"])) {
-            die("Error: Only JPG, JPEG, and PNG files are allowed.");
-        }
-
-        if (!move_uploaded_file($_FILES["student_photo"]["tmp_name"], $target_file)) {
-            die("Error uploading the image.");
-        }
-
-        $student_photo = basename($_FILES["student_photo"]["name"]); 
-    } else {
-        die("Error: No file uploaded.");
+    // Create uploads folder if it doesn't exist
+    if (!is_dir($target_dir)) {
+        mkdir($target_dir, 0777, true);
     }
+
+    // Full file path
+    $target_file = $target_dir . basename($_FILES["student_photo"]["name"]);
+
+    // Get file extension from original file
+    $imageFileType = strtolower(pathinfo($_FILES["student_photo"]["name"], PATHINFO_EXTENSION));
+
+    // Check if file is an actual image
+    $check = getimagesize($_FILES["student_photo"]["tmp_name"]);
+    if ($check === false) {
+        die("Error: File is not an image.");
+    }
+
+    // Allow only specific extensions
+    if (!in_array($imageFileType, ["jpg", "jpeg", "png"])) {
+        die("Error: Only JPG, JPEG, and PNG files are allowed.");
+    }
+
+    // Move uploaded file
+    if (!move_uploaded_file($_FILES["student_photo"]["tmp_name"], $target_file)) {
+        die("Error uploading the image.");
+    }
+
+    // Store filename only (not full path)
+    $student_photo = basename($_FILES["student_photo"]["name"]);
+
+} else {
+    die("Error: No file uploaded.");
+}
 
     $stmt1 = $conn_student->prepare("INSERT INTO students (id_number, first_name, last_name, middle_name, campus, guardian_name, province, city, barangay, emergency_contact, student_photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     if (!$stmt1) {

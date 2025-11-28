@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $departmentName = trim($_POST['departmentName']);
 
 
-    $stmt = $conn->prepare("INSERT INTO department (department_code, department_name) VALUES (?, ?)");
+    $stmt = $conn->prepare("INSERT INTO office (office_code, department_name) VALUES (?, ?)");
     $stmt->bind_param("ss",  $departmentCode, $departmentName);
     
     if ($stmt->execute()) {

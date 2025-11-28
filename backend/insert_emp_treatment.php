@@ -17,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($student_id) || empty($date) || empty($chief_complaint)  || empty($treatment)) {
         $_SESSION['message'] = "All fields (Student ID, Date, Chief Complaint, and Treatment) are required.";
         $_SESSION['message_type'] = "error";
-        header("Location: ../frontend/medical_treatment_record.php");
+        header("Location: ../frontend/emp_treatment_record.php");
         exit;
     }
 
-    $query = "INSERT INTO medical_treatment_records (student_id, date, chief_complaint,  treatment) VALUES (?, ?, ?, ?)";
+    $query = "INSERT INTO employee_treatment_records (id_number, date_treatment, emp_complaint,  treatment) VALUES (?, ?, ?, ?)";
     $stmt = $conn_medical->prepare($query);
     if ($stmt === false) {
         die('MySQL prepare error: ' . $conn_medical->error);
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $stmt->close();
-    header("Location: ../frontend/medical_treatment_record.php");
+    header("Location: ../frontend/emp_treatment_record.php");
     exit;
 }
 ?>
